@@ -12,9 +12,7 @@ We are using this (tutorial)[https://github.com/omcljs/om/wiki/Basic-Tutorial] t
 ### run 
 
 ```lein figwheel```
-
-
-## using figwill and clojure script 
+ 
 
 
 
