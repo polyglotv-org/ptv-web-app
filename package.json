@@ -1,0 +1,32 @@
+{
+  "name": "polyglot-web",
+  "version": "0.1.0",
+  "proxy": "http://localhost:8888/api/v1/",
+  "private": true,
+  "dependencies": {
+    "@material-ui/core": "^3.8.1",
+    "@material-ui/icons": "^3.0.1",
+    "@material-ui/lab": "^3.0.0-alpha.25",
+    "axios": "^0.18.0",
+    "class-names": "^1.0.0",
+    "connected-react-router": "^4.3.0",
+    "prop-types": "^15.6.2",
+    "react": "^16.6.3",
+    "react-dom": "^16.6.3",
+    "react-player": "^1.6.4",
+    "react-redux": "^5.0.7",
+    "react-router-dom": "^4.3.1",
+    "react-scripts": "1.1.4",
+    "react-video-thumbnail": "^0.1.3",
+    "redux": "^4.0.0",
+    "redux-form": "^7.4.2",
+    "redux-promise-middleware": "^5.1.1",
+    "redux-thunk": "^2.3.0"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "test": "react-scripts test --env=jsdom",
+    "eject": "react-scripts eject"
+  }
+}

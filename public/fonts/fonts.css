@@ -1,0 +1,13 @@
+@font-face {
+  font-family: 'Raleway-Regular';
+  font-weight: normal;
+  font-style: normal;
+  src: url('./Raleway-Regular.ttf');
+}
+
+@font-face {
+  font-family: 'Raleway-SemiBold';
+  font-weight: normal;
+  font-style: normal;
+  src: url('./Raleway-SemiBold.ttf');
+}
