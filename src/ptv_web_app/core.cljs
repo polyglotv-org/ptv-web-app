@@ -1,5 +1,8 @@
 (ns ptv-web-app.core
-  (:require [om.core :as om :include-macros true]
+  (:require [cljsjs.material-ui] 
+  [cljs-react-material-ui.core :as ui]
+  [cljs-react-material-ui.icons :as ic]
+            [om.core :as om :include-macros true]
             [om.dom :as dom :include-macros true]))
 
 (enable-console-print!)

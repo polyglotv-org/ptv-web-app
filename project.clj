@@ -13,7 +13,8 @@
                  [cljsjs/react-dom "15.6.1-1"]
                  [sablono "0.8.3"]
                  [org.omcljs/om "1.0.0-alpha46"]
-                 [om-material-ui "0.1.1"]]
+                 [om-material-ui "0.1.1"]
+                 [cljs-react-material-ui "0.2.48"]]
 
   :plugins [[lein-figwheel "0.5.16"]
             [lein-cljsbuild "1.1.7" :exclusions [[org.clojure/clojure]]]]
