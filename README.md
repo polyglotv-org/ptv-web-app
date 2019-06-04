@@ -1,39 +1,72 @@
 # ptv-web-app
 
-FIXME: Write a one-line description of your library/project.
+A [re-frame](https://github.com/Day8/re-frame) application designed to ... well, that part is up to you.
 
-## Overview
+## Development Mode
 
-FIXME: Write a paragraph about the library/project and highlight its goals.
+### Compile css:
 
-## Setup
+Compile css file once.
 
-To get an interactive development environment run:
+```
+lein garden once
+```
 
-    lein figwheel
+Automatically recompile css file on change.
 
-and open your browser at [localhost:3449](http://localhost:3449/).
-This will auto compile and send all changes to the browser without the
-need to reload. After the compilation process is complete, you will
-get a Browser Connected REPL. An easy way to try it is:
+```
+lein garden auto
+```
 
-    (js/alert "Am I connected?")
+### Compile css:
 
-and you should see an alert in the browser window.
+Compile css file once.
 
-To clean all compiled files:
+```
+lein less once
+```
 
-    lein clean
+Automatically recompile css file on change.
 
-To create a production build run:
+```
+lein less auto
+```
 
-    lein do clean, cljsbuild once min
+### Run application:
 
-And open your browser in `resources/public/index.html`. You will not
-get live reloading, nor a REPL. 
+```
+lein clean
+lein figwheel dev
+```
 
-## License
+Figwheel will automatically push cljs changes to the browser.
 
-Copyright © 2014 FIXME
+Wait a bit, then browse to [http://localhost:3449](http://localhost:3449).
 
-Distributed under the Eclipse Public License either version 1.0 or (at your option) any later version.
+### Run tests:
+
+Install karma and headless chrome
+
+```
+npm install -g karma-cli
+npm install karma karma-cljs-test karma-chrome-launcher --save-dev
+```
+
+And then run your tests
+
+```
+lein clean
+lein doo chrome-headless test once
+```
+
+Please note that [doo](https://github.com/bensu/doo) can be configured to run cljs.test in many JS environments (phantom, chrome, ie, safari, opera, slimer, node, rhino, or nashorn).
+
+## Production Build
+
+
+To compile clojurescript to javascript:
+
+```
+lein clean
+lein cljsbuild once min
+```
