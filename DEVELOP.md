@@ -9,9 +9,13 @@ For our first experiment with clojure script we choose (om)[https://github.com/o
 
 We are using this (tutorial)[https://github.com/omcljs/om/wiki/Basic-Tutorial] to create the initial app
 
-### run 
 
-```lein figwheel```
+##Using re-frame re-com
+
+We have create the app using the following command:
+
+```lein new re-frame ptv-web-app +garden +re-com +routes +test +less +10x```
+
  
 
 

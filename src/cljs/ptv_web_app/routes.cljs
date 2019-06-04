@@ -28,6 +28,9 @@
   (defroute "/about" []
     (re-frame/dispatch [::events/set-active-panel :about-panel]))
 
+  (defroute "/lesson" []
+    (re-frame/dispatch [::events/set-active-panel :lesson-panel]))
+
 
   ;; --------------------
   (hook-browser-navigation!))
