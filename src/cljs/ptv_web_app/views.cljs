@@ -1,8 +1,10 @@
 (ns ptv-web-app.views
   (:require
+   [reagent.core :as reagent]
    [re-frame.core :as re-frame]
    [re-com.core :as re-com]
    [ptv-web-app.subs :as subs]
+   [cljsjs.react-player]
    ))
 
 ;; home
@@ -45,12 +47,17 @@
 
 
 ;; lesson panel
+(def react-player  (reagent/adapt-react-class js/ReactPlayer))
 
+(defn player []
+  [:div
+   [react-player {:url "https://www.youtube.com/watch?v=rI8tNMsozo0"}]])
 
 (defn lesson-panel []
   [re-com/v-box
    :gap "1em"
    :children [[lesson-title]
+              [player]
               [link-to-about-page] [link-to-home-page]]])
 
 ;; about

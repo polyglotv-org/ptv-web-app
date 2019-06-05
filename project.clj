@@ -6,7 +6,9 @@
                  [re-com "2.4.0"]
                  [secretary "1.2.3"]
                  [garden "1.3.5"]
-                 [ns-tracker "0.3.1"]]
+                 [ns-tracker "0.3.1"]
+                 [cljsjs/react-player "1.11.0-0"]
+                 ]
 
   :plugins [[lein-cljsbuild "1.1.7"]
             [lein-garden "0.2.8"]
