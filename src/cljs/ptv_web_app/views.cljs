@@ -4,8 +4,7 @@
    [re-frame.core :as re-frame]
    [re-com.core :as re-com]
    [ptv-web-app.subs :as subs]
-   [cljsjs.react-player]
-   ))
+   [cljsjs.react-player]))
 
 ;; home
 
@@ -14,6 +13,12 @@
     [re-com/title
      :label (str "Home Page.")
      :level :level1]))
+
+
+(defn home-body []
+  [:div [:ul [:li "1"]
+         [:li "2"]
+         [:li "3"]]])
 
 (defn link-to-about-page []
   [re-com/hyperlink-href
@@ -42,8 +47,7 @@
   [re-com/v-box
    :gap "1em"
    :children [[home-title]
-              [link-to-about-page ][link-to-lesson-page]
-              ]])
+              [link-to-about-page] [home-body] [link-to-lesson-page]]])
 
 
 ;; lesson panel
