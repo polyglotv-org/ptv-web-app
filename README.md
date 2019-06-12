@@ -1,72 +1,35 @@
-# ptv-web-app
+# Using [Shadow](http://shadow-cljs.org/)
 
-A [re-frame](https://github.com/Day8/re-frame) application designed to ... well, that part is up to you.
+This project was createed with the shadow npx tool
 
-## Development Mode
+## Prerequisites
 
-### Compile css:
+Install [nvm](https://gist.github.com/d2s/372b5943bce17b964a79)
 
-Compile css file once.
+Install latest stabel node 
 
-```
-lein garden once
-```
-
-Automatically recompile css file on change.
-
-```
-lein garden auto
+```shell 
+nvm install v10.15.3
+nvm alias default v10.15.3
+nvm list
 ```
 
-### Compile css:
 
-Compile css file once.
+## Development
 
-```
-lein less once
-```
+Before running the application for the first time you need to install
+all required `npm` libraries. From the top directory of the
+installation, do the following:
 
-Automatically recompile css file on change.
-
-```
-lein less auto
+```shell
+cd examples/withshadow
+npm install 
 ```
 
-### Run application:
+Then, every time you want to run the application, do:
 
-```
-lein clean
-lein figwheel dev
-```
-
-Figwheel will automatically push cljs changes to the browser.
-
-Wait a bit, then browse to [http://localhost:3449](http://localhost:3449).
-
-### Run tests:
-
-Install karma and headless chrome
-
-```
-npm install -g karma-cli
-npm install karma karma-cljs-test karma-chrome-launcher --save-dev
+```shell
+cd examples/withshadow
+npm run dev
 ```
 
-And then run your tests
-
-```
-lein clean
-lein doo chrome-headless test once
-```
-
-Please note that [doo](https://github.com/bensu/doo) can be configured to run cljs.test in many JS environments (phantom, chrome, ie, safari, opera, slimer, node, rhino, or nashorn).
-
-## Production Build
-
-
-To compile clojurescript to javascript:
-
-```
-lein clean
-lein cljsbuild once min
-```
