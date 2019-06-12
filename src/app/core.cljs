@@ -1,18 +1,17 @@
 (ns app.core
   (:require [reagent.core :as r]
             [re-frame.core :as rf]
-            ["react-player" :refer [ReactPlayer]
-             ]))
+             ))
 
 
 (defn app
   []
   [:div "polyglotv.org"]
-   [ r/create-class ReactPlayer])
+   [reagent/adapt-react-class react-player])
 
 
 (defn ^:dev/after-load start
-  []
+  [ ]
   (r/render [app]
             (.getElementById js/document "app")))
 
